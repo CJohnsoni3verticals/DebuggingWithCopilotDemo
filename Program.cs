@@ -1,6 +1,7 @@
 ﻿// OrderProcessor/Program.cs
 // DEMO APP — contains 4 deliberate bugs for the Copilot debugging demo.
 // Do NOT fix before presenting.
+// We'll fix this together during the demo!
 
 using System;
 using System.Collections.Generic;
