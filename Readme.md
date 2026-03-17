@@ -194,13 +194,20 @@ First, let’s look at the specialized agents available in VS 2026.
 
 ### [13:30 – 15:00] Close *(1.5 min)*
 
-> "With a professional license, Copilot supports more advanced models, and the quality and depth of the analysis scales with the model. Worth experimenting with if you want richer explanations."
+> "With a professional license, Copilot supports more advanced models than GPT 4, and the quality and depth of the analysis scales with the model. Worth experimenting with if you want richer explanations."
 > 
 
-> There’s a much more in-depth video produced by Microsoft that covers this and more. I'm dropping a link in Teams chat.
+> Here’s a link to a much more in-depth video produced by Microsoft that covers this and more. It's a year old, but still very relevant.
 > 
-
 📎 **Post in Teams chat:** https://www.youtube.com/watch?v=iFjQghRbJUw
+
+> Here’s the link to this repo.
+> 
+📎 **Post in Teams chat:** [link to this repo]
+
+> and here’s the link to the current official documentation on this topic.
+> 
+📎 **Post in Teams chat:** https://learn.microsoft.com/en-us/visualstudio/debugger/debug-with-copilot?view=visualstudio
 
 **Mention as future sessions:**
 
