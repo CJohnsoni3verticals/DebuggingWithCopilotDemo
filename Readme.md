@@ -76,6 +76,7 @@ First, let’s look at the specialized agents available in VS 2026.
     
     > "Notice I didn't type a thing. Copilot already knows the exception, the line, and what's in scope."
     > 
+    > "Also, I didn't switch modes; I didn't even type a command. The IDE recognized I was debugging and surfaced the right agent on its own!"
 5. Copilot (GPT-4.1) responds with: *"Would you like me to update Bob's order to use an empty list for Items?"*
 6. Type **"yes"**. Copilot generates the diff.
     
@@ -175,7 +176,7 @@ First, let’s look at the specialized agents available in VS 2026.
 2. Set a breakpoint on the first `Console.WriteLine` line.
 3. Press **F5**. Use the conditional breakpoint from Segment 2 (still disabled, re-enable it, or step past earlier orders) to land on Carol's order.
 4. Right-click the “total” variable in Locals and **Analyze with Copilot**
-5. **Inline values** appear in the editor margin: `subtotal = $249.99`, `discount = $0.00`.
+5. **Inline values** appear in the locals window: `subtotal = $249.99`, `discount = $0.00` (or with ReSharper right in the editor window itself).
     
     > "Carol has a $250 order. Zero discount. That doesn't feel right."
     > 
