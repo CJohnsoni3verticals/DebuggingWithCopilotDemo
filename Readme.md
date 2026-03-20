@@ -6,6 +6,7 @@
 
 ## Setup Checklist *(before the room fills up)*
 
+- [ ]  Remember to smile. This is exciting stuff, and smiling will make it sound more exciting.
 - [ ]  Remember to talk slowly. This is old-ish to you, but new-ish to some others, and English also isn’t a first language for many in attendance.
 - [ ]  VS 2022 17.8+ open with `DebuggingWithCopilotDemo` solution loaded
 - [ ]  GitHub Copilot signed in and active (check the status bar icon)
@@ -39,10 +40,8 @@ Scenarios #6 (repo context), #7 (Parallel Stacks deadlocks), #8 (Debugger Agent 
 ### [0:00 – 1:00] Intro
 
 > Today I’m going to present how to use the “Debug(ger)” agent in VS 2022 & VS 2026. Some agents/skills aren’t currently “in the box” in VS 2022, but are automatically available when you open VS 2026.
-
 Similar to Claude Skills (which, btw, are also supported by Copilot now), these specialized agents *should* automatically “kick in” when they’re needed. Alternatively, you can select them explicitly.
-
-First, let’s look at the specialized agents available in VS 2026.
+Looking at the specialized agents available in VS 2026, there's a lot to cover. I won't cover these in today's demo, but in the repo I post later you can see more info about them.
 > 
 
 ## GitHub Copilot Extension Agents
@@ -53,9 +52,9 @@ First, let’s look at the specialized agents available in VS 2026.
 - **Profiler:** This is for performance tuning. It helps interpret profiling data, identifying "hot paths" or memory leaks, and suggesting optimizations to reduce CPU or RAM usage.
 - **Test:** Focused on quality assurance, this agent can generate unit tests (using frameworks like xUnit or MSTest), suggest edge cases you might have missed, and help fix failing tests.
 - **VS (Visual Studio):** This is a meta-agent for the IDE itself. Use it to ask how to find specific settings, how to use hidden VS features, or to perform IDE-level commands through natural language.
-- **Custom Agent(s)…**
+- **Custom Agents (e.g. WinForms Expert)** - stored in and read from \\.github\agents
 
-> Moving on to the code, this is a simple, small app I vibe-coded just the other day, specifically for this demo. I’ll drop a link to the repo at the end of this demo.
+> Moving on to the code, this is a simple, small app I vibe-coded just the other day, specifically for this demo.
 > 
 
 ---
@@ -66,6 +65,10 @@ First, let’s look at the specialized agents available in VS 2026.
 
 **Steps:**
 
+0. Call out Copilot setup.
+
+    > You'll see I have GitHub Copilot installed and I'm logged in. I happen to have a business license, which I highly recommend getting if you don't have it yet, but I'll demo everything you can do already with only free models.
+    >
 1. Press **F5**. The app crashes immediately with a `NullReferenceException`.
 2. The **Exception Helper** window appears. Point it out.
     
@@ -98,7 +101,7 @@ First, let’s look at the specialized agents available in VS 2026.
 **Talking points:**
 
 - Copilot doesn't just identify the null — it traces *why* it's null (Bob's order was never given an item list).
-- In a codebase with repo context enabled, that follow-up question searches across the whole project, not just the open file.
+- In a codebase with repo context enabled, that follow-up question I just asked will actually search across the whole project, not just the open file.
 
 ---
 
