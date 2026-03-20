@@ -39,11 +39,11 @@ Scenarios #6 (repo context), #7 (Parallel Stacks deadlocks), #8 (Debugger Agent 
 
 ### [0:00 – 1:00] Intro
 
-> Today I’m going to present how to use the “Debug(ger)” agent in VS 2022 & VS 2026. Some agents/skills aren’t currently “in the box” in VS 2022, but are automatically available when you open VS 2026.
+> Today I’m going to present how to use the “Debug(ger)” agent in VS 2022 & VS 2026. I'll attempt to go through this quickly, so I'll ask that we save all questions until the end.
 >
 > Why this matters: In Visual Studio, Microsoft has uniquely addressed a gap found in the most popular AI coding tools today. Vibe Coding and AI Engineering has been heavily weighted toward greenfield development, and the tools we use have been lacking in the areas of operations support and maintenance. This demo fills in those gaps.
 
-Similar to Claude Skills (which, btw, are also supported by Copilot now), these specialized agents *should* automatically “kick in” when they’re needed. Alternatively, you can select them explicitly.
+Some agents/skills aren’t currently “in the box” in VS 2022, but are automatically available when you open VS 2026. Similar to Claude Skills (which, btw, are also supported by Copilot now), these specialized agents *should* automatically “kick in” when they’re needed. Alternatively, you can select them explicitly.
 
 Looking at the specialized agents available in VS 2026, there's a lot to cover.
 ## GitHub Copilot Extension Agents
