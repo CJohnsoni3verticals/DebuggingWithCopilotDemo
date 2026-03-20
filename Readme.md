@@ -1,4 +1,4 @@
-﻿# Demo: Debugging .NET with GitHub Copilot
+﻿﻿# Demo: Debugging .NET with GitHub Copilot
 
 # 15-Minute Demo Script
 
@@ -203,11 +203,13 @@ First, let’s look at the specialized agents available in VS 2026.
 
 > Here’s the link to this repo.
 > 
-📎 **Post in Teams chat:** [link to this repo]
+📎 **Post in Teams chat:** https://github.com/CJohnsoni3verticals/DebuggingWithCopilotDemo
 
-> and here’s the link to the current official documentation on this topic.
-> 
+> and here are a couple links to the current official documentation on this topic.> 
+
 📎 **Post in Teams chat:** https://learn.microsoft.com/en-us/visualstudio/debugger/debug-with-copilot?view=visualstudio
+
+📎 **Post in Teams chat:** https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes#debugging--diagnostics
 
 **Mention as future sessions:**
 
