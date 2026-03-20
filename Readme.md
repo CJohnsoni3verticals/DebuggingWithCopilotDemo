@@ -6,16 +6,16 @@
 
 ## Setup Checklist *(before the room fills up)*
 
-- [ ]  Remember to talk slow. This is old-ish to you, but new-ish to some others, and English also isn’t a first language for many in attendance.
-- [ ]  VS 2022 17.8+ open with `OrderProcessor` solution loaded
+- [ ]  Remember to talk slowly. This is old-ish to you, but new-ish to some others, and English also isn’t a first language for many in attendance.
+- [ ]  VS 2022 17.8+ open with `DebuggingWithCopilotDemo` solution loaded
 - [ ]  GitHub Copilot signed in and active (check the status bar icon)
 - [ ]  Ensure GPT-4.1 is selected as the model
-- [ ]  Ensure unpinned “order” properties prior to demoing
+- [ ]  Ensure unpinned “order” properties before demoing
 - [ ]  App in a **broken** starting state — do NOT pre-fix any bugs
 - [ ]  **Font size:** Tools → Options → Environment → Fonts and Colors → in the "Show settings for" dropdown, select **Environment** → increase the Size
 - [ ]  **Monitor resolution:** set to **1920 × 1080**
 - [ ]  **Windows Display Settings:** Scale and layout → **125% or 150%**
-- [ ]  **Theme:** try a High Contrast theme for visibility
+- [ ]  **Theme:** Try a High Contrast theme for visibility
 - [ ]  **Share the Window, not the Screen** — and confirm terminal output is visible within that window
 - [ ]  Copilot Chat panel closed at start (the contextual pop-ups land harder when they appear organically)
 
@@ -38,7 +38,7 @@ Scenarios #6 (repo context), #7 (Parallel Stacks deadlocks), #8 (Debugger Agent 
 
 ### [0:00 – 1:00] Intro
 
-> Today I’m going to present how to use the “Debug(ger)” agent in VS 2022 & VS 2026. There are some agents/skills that aren’t currently “in the box” in VS 2022, but are automatically available when you open VS 2026.
+> Today I’m going to present how to use the “Debug(ger)” agent in VS 2022 & VS 2026. Some agents/skills aren’t currently “in the box” in VS 2022, but are automatically available when you open VS 2026.
 
 Similar to Claude Skills (which, btw, are also supported by Copilot now), these specialized agents *should* automatically “kick in” when they’re needed. Alternatively, you can select them explicitly.
 
@@ -55,7 +55,7 @@ First, let’s look at the specialized agents available in VS 2026.
 - **VS (Visual Studio):** This is a meta-agent for the IDE itself. Use it to ask how to find specific settings, how to use hidden VS features, or to perform IDE-level commands through natural language.
 - **Custom Agent(s)…**
 
-> Moving on to the code, this is a simple, small app I vibe-coded just the other day specifically for this demo. I’ll drop a link to the repo at the end of this demo.
+> Moving on to the code, this is a simple, small app I vibe-coded just the other day, specifically for this demo. I’ll drop a link to the repo at the end of this demo.
 > 
 
 ---
@@ -90,7 +90,7 @@ First, let’s look at the specialized agents available in VS 2026.
     
     > We’re looking for a suggestion to initialize Items as an empty list instead of null.
     > 
-10. Re-run this with GPT-4o model, and continue on with that.
+10. Re-run this with the GPT-4o model, and continue with that.
     
     > "Notice how 4.1 asks for permission? That's a **conversational fallback**. It means the model didn't provide a valid code diff that the IDE could verify. 4o, however, is using **Agentic Workflows**—it provides a verifiable diff that the IDE recognizes, which is why we get that 'one-click' Apply button."
     > 
@@ -194,7 +194,7 @@ First, let’s look at the specialized agents available in VS 2026.
 
 ### [13:30 – 15:00] Close *(1.5 min)*
 
-> "With a professional license, Copilot supports more advanced models than GPT 4, and the quality and depth of the analysis scales with the model. Worth experimenting with if you want richer explanations."
+> "With a professional license, Copilot supports more advanced models than GPT 4, and the quality and depth of the analysis scale with the model. Worth experimenting with if you want richer explanations."
 > 
 
 > Here’s a link to a much more in-depth video produced by Microsoft that covers this and more. It's a year old, but still very relevant.
@@ -203,9 +203,10 @@ First, let’s look at the specialized agents available in VS 2026.
 
 > Here’s the link to this repo.
 > 
-📎 **Post in Teams chat:** [link to this repo]
+📎 **Post in Teams chat:** https://github.com/CJohnsoni3verticals/DebuggingWithCopilotDemo
 
 > and here are a couple links to the current official documentation on this topic.> 
+
 📎 **Post in Teams chat:** https://learn.microsoft.com/en-us/visualstudio/debugger/debug-with-copilot?view=visualstudio
 
 📎 **Post in Teams chat:** https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes#debugging--diagnostics
