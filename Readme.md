@@ -41,7 +41,11 @@ Scenarios #6 (repo context), #7 (Parallel Stacks deadlocks), #8 (Debugger Agent 
 
 > Today I’m going to present how to use the “Debug(ger)” agent in VS 2022 & VS 2026. I'll attempt to go through this quickly, so I'll ask that we save all questions until the end.
 >
-> Why this matters: In Visual Studio, Microsoft has uniquely addressed a gap found in the most popular AI coding tools today. Vibe Coding and AI Engineering has been heavily weighted toward greenfield development, and the tools we use have been lacking in the areas of operations support and maintenance. This demo fills in those gaps.
+> Why this matters: In Visual Studio, Microsoft has uniquely addressed a gap found in the most popular AI coding tools today. Vibe Coding and AI Engineering has been heavily weighted toward greenfield development, and the tools we use have been lacking in the areas of operations support and maintenance.
+> 
+> Also, in contrast to the traditional chat UI, which act more like a "Rubber Duck", the Debugger Agent has "Deep Context" access to the call stack and local variables. This is huge!
+>
+> This demo aims to help you fill those gaps left by other tools.
 
 Some agents/skills aren’t currently “in the box” in VS 2022, but are automatically available when you open VS 2026. Similar to Claude Skills (which, btw, are also supported by Copilot now), these specialized agents *should* automatically “kick in” when they’re needed. Alternatively, you can select them explicitly.
 
@@ -87,6 +91,7 @@ Looking at the specialized agents available in VS 2026, there's a lot to cover.
     
     > "I can review exactly what it's changing before I accept anything."
     > 
+    > "Notice it correctly identified that the Order object was null because the call on line 44 failed, which isn't immediately obvious from the stack trace alone."
 7. Apply the fix. Rerun. The crash is gone.
 8. Now ask in the chat: **"Are there other places where Items could be null?"** Show the response.
     
