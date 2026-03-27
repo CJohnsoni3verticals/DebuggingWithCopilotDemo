@@ -6,3 +6,5 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "<Pending>", Scope = "member", Target = "~M:DebuggingWithCopilotDemo.Program.Main(System.String[])")]
+[assembly: SuppressMessage("Style", "IDE0090:Use 'new(...)'", Justification = "<Pending>", Scope = "member", Target = "~M:DebuggingWithCopilotDemo.Program.GetSampleOrders~System.Collections.Generic.List{DebuggingWithCopilotDemo.Order}")]
+[assembly: SuppressMessage("Style", "IDE0028:Simplify collection initialization", Justification = "<Pending>", Scope = "member", Target = "~M:DebuggingWithCopilotDemo.Program.GetSampleOrders~System.Collections.Generic.List{DebuggingWithCopilotDemo.Order}")]
