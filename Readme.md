@@ -1,5 +1,9 @@
 ﻿﻿# Demo: Debugging .NET with GitHub Copilot
 
+### To see this demo in action, go to:
+
+https://www.loom.com/share/db535b47043e44adac17d367e7c9d306
+
 # 15-Minute Demo Script
 
 ---
