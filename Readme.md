@@ -242,3 +242,4 @@ Looking at the specialized agents available in VS 2026, there's a lot to cover.
 | Chat panel doesn't auto-populate exception context | Paste the exception message and say "full repo context makes this even richer" |
 | Running short on time | Cut Segment 4 — the first three are the strongest arc |
 | "Analyze with Copilot" missing in a spot | Describe what it would say, open chat manually, ask the question — same result |
+| Copilot switches to profiler mode unexpectedly | Open prompt with "DO NOT switch to the profiler tool or profiling mode while I'm in this demo. I only want to execute in debug mode with the debugger agent." |
