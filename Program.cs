@@ -1,4 +1,4 @@
-﻿namespace OrderProcessor
+﻿namespace DebuggingWithCopilotDemo
 {
     class Program
     {
