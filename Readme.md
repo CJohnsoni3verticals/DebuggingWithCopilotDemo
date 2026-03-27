@@ -6,6 +6,7 @@
 
 ## Setup Checklist *(before the room fills up)*
 
+- [ ]  Remember to smile. This is exciting stuff, and smiling will make it sound more exciting.
 - [ ]  Remember to talk slowly. This is old-ish to you, but new-ish to some others, and English also isn’t a first language for many in attendance.
 - [ ]  VS 2022 17.8+ open with `DebuggingWithCopilotDemo` solution loaded
 - [ ]  GitHub Copilot signed in and active (check the status bar icon)
@@ -38,13 +39,17 @@ Scenarios #6 (repo context), #7 (Parallel Stacks deadlocks), #8 (Debugger Agent 
 
 ### [0:00 – 1:00] Intro
 
-> Today I’m going to present how to use the “Debug(ger)” agent in VS 2022 & VS 2026. Some agents/skills aren’t currently “in the box” in VS 2022, but are automatically available when you open VS 2026.
-
-Similar to Claude Skills (which, btw, are also supported by Copilot now), these specialized agents *should* automatically “kick in” when they’re needed. Alternatively, you can select them explicitly.
-
-First, let’s look at the specialized agents available in VS 2026.
+> Today I’m going to present how to use the “Debug(ger)” agent in VS 2022 & VS 2026. I'll attempt to go through this quickly, so I'll ask that we save all questions until the end.
+>
+> Why this matters: In Visual Studio, Microsoft has uniquely addressed a gap found in the most popular AI coding tools today. Vibe Coding and AI Engineering has been heavily weighted toward greenfield development, and the tools we use have been lacking in the areas of operations support and maintenance.
 > 
+> Also, in contrast to the traditional chat UI, which act more like a "Rubber Duck", the Debugger Agent has "Deep Context" access to the call stack and local variables. This is huge!
+>
+> This demo aims to help you fill those gaps left by other tools.
 
+Some agents/skills aren’t currently “in the box” in VS 2022, but are automatically available when you open VS 2026. Similar to Claude Skills (which, btw, are also supported by Copilot now), these specialized agents *should* automatically “kick in” when they’re needed. Alternatively, you can select them explicitly.
+
+Looking at the specialized agents available in VS 2026, there's a lot to cover.
 ## GitHub Copilot Extension Agents
 
 - **Copilot Coding Agent:** This is your primary partner for writing and refactoring code. It has the best context of your entire workspace and is optimized for generating boilerplate, suggesting logic, or explaining complex functions.
@@ -53,9 +58,9 @@ First, let’s look at the specialized agents available in VS 2026.
 - **Profiler:** This is for performance tuning. It helps interpret profiling data, identifying "hot paths" or memory leaks, and suggesting optimizations to reduce CPU or RAM usage.
 - **Test:** Focused on quality assurance, this agent can generate unit tests (using frameworks like xUnit or MSTest), suggest edge cases you might have missed, and help fix failing tests.
 - **VS (Visual Studio):** This is a meta-agent for the IDE itself. Use it to ask how to find specific settings, how to use hidden VS features, or to perform IDE-level commands through natural language.
-- **Custom Agent(s)…**
+- **Custom Agents (e.g. WinForms Expert)** - stored in and read from \\.github\agents
 
-> Moving on to the code, this is a simple, small app I vibe-coded just the other day, specifically for this demo. I’ll drop a link to the repo at the end of this demo.
+> Moving on to the code, this is a simple, small app I vibe-coded just the other day, specifically for this demo.
 > 
 
 ---
@@ -66,6 +71,10 @@ First, let’s look at the specialized agents available in VS 2026.
 
 **Steps:**
 
+0. Call out Copilot setup.
+
+    > You'll see I have GitHub Copilot installed and I'm logged in. I happen to have a business license, which I highly recommend getting if you don't have it yet, but I'll demo everything you can do already with only free models.
+    >
 1. Press **F5**. The app crashes immediately with a `NullReferenceException`.
 2. The **Exception Helper** window appears. Point it out.
     
@@ -76,11 +85,13 @@ First, let’s look at the specialized agents available in VS 2026.
     
     > "Notice I didn't type a thing. Copilot already knows the exception, the line, and what's in scope."
     > 
+    > "Also, I didn't switch modes; I didn't even type a command. The IDE recognized I was debugging and surfaced the right agent on its own!"
 5. Copilot (GPT-4.1) responds with: *"Would you like me to update Bob's order to use an empty list for Items?"*
 6. Type **"yes"**. Copilot generates the diff.
     
     > "I can review exactly what it's changing before I accept anything."
     > 
+    > "Notice it correctly identified that the Order object was null because the call on line 44 failed, which isn't immediately obvious from the stack trace alone."
 7. Apply the fix. Rerun. The crash is gone.
 8. Now ask in the chat: **"Are there other places where Items could be null?"** Show the response.
     
@@ -98,7 +109,7 @@ First, let’s look at the specialized agents available in VS 2026.
 **Talking points:**
 
 - Copilot doesn't just identify the null — it traces *why* it's null (Bob's order was never given an item list).
-- In a codebase with repo context enabled, that follow-up question searches across the whole project, not just the open file.
+- In a codebase with repo context enabled, that follow-up question I just asked will actually search across the whole project, not just the open file.
 
 ---
 
@@ -175,7 +186,7 @@ First, let’s look at the specialized agents available in VS 2026.
 2. Set a breakpoint on the first `Console.WriteLine` line.
 3. Press **F5**. Use the conditional breakpoint from Segment 2 (still disabled, re-enable it, or step past earlier orders) to land on Carol's order.
 4. Right-click the “total” variable in Locals and **Analyze with Copilot**
-5. **Inline values** appear in the editor margin: `subtotal = $249.99`, `discount = $0.00`.
+5. **Inline values** appear in the locals window: `subtotal = $249.99`, `discount = $0.00` (or with ReSharper right in the editor window itself).
     
     > "Carol has a $250 order. Zero discount. That doesn't feel right."
     > 
