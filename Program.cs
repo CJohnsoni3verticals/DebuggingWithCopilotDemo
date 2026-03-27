@@ -14,7 +14,7 @@
 
             Console.WriteLine($"Orders over $100: {highValueOrders.Count()}");
             foreach (var o in highValueOrders)
-                Console.WriteLine($"  #{o.Id}  {o.CustomerName}");
+            { Console.WriteLine($"  #{o.Id}  {o.CustomerName}"); }
 
             Console.WriteLine("\n=== Processing ===\n");
 
