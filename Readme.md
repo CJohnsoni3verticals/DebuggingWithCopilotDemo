@@ -176,7 +176,7 @@ Looking at the specialized agents available in VS 2026, there's a lot to cover.
 
 ---
 
-### [10:30 – 13:30] Segment 4 — Inline Values + Explaining Unexpected Output *(3 min)*
+### [10:30 – 13:30] Segment 4 — Locals and Watch Windows + Explaining Unexpected Output *(3 min)*
 
 **What you're showing:** Copilot can look at a live variable value that's wrong and reason about why the logic produced it.
 
