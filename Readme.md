@@ -47,7 +47,7 @@ Scenarios #6 (repo context), #7 (Parallel Stacks deadlocks), #8 (Debugger Agent 
 >
 > This demo aims to help you fill those gaps left by other tools.
 
-Some agents/skills aren’t currently “in the box” in VS 2022, but are automatically available when you open VS 2026. Similar to Claude Skills (which, btw, are also supported by Copilot now), these specialized agents *should* automatically “kick in” when they’re needed. Alternatively, you can select them explicitly.
+Some agents/skills are not currently “in the box” in VS 2022, but are automatically available when you open VS 2026. Similar to Claude Skills (which, btw, are also supported by Copilot now), these specialized agents *should* automatically “kick in” when they’re needed. Alternatively, you can select them explicitly.
 
 Looking at the specialized agents available in VS 2026, there's a lot to cover.
 ## GitHub Copilot Extension Agents
@@ -119,7 +119,7 @@ Looking at the specialized agents available in VS 2026, there's a lot to cover.
 
 **Steps:**
 
-1. Press **Ctrl+G**, type **33**, press Enter to jump to the `foreach (var order in orders)` loop.
+1. Press **Ctrl+G**, type **23**, press Enter to jump to the `foreach (var order in orders)` loop.
 2. Right-click in the gutter *inside the loop body* → **Insert Temporary Breakpoint**.
 3. Right-click the breakpoint and select “Conditions…”.
 4. Click into the condition field and pause — let Copilot's suggestions appear.
@@ -151,7 +151,7 @@ Looking at the specialized agents available in VS 2026, there's a lot to cover.
 
 **Steps:**
 
-1. Press **Ctrl+G**, type **24**, press Enter to jump to the `highValueOrders` LINQ query.
+1. Press **Ctrl+G**, type **30**, press Enter to jump to the `highValueOrders` LINQ query.
 2. Set a breakpoint on the line *immediately after* the assignment.
 3. Press **F5**, hit the breakpoint.
 4. Hover over `highValueOrders` — the DataTip appears with a magnifying glass icon. Click it to open the **IEnumerable Visualizer**.
@@ -176,13 +176,13 @@ Looking at the specialized agents available in VS 2026, there's a lot to cover.
 
 ---
 
-### [10:30 – 13:30] Segment 4 — Inline Values + Explaining Unexpected Output *(3 min)*
+### [10:30 – 13:30] Segment 4 — Locals and Watch Windows + Explaining Unexpected Output *(3 min)*
 
 **What you're showing:** Copilot can look at a live variable value that's wrong and reason about why the logic produced it.
 
 **Steps:**
 
-1. Press **Ctrl+G**, type **55**, press Enter to jump to the discount logic inside `ProcessOrder`.
+1. Press **Ctrl+G**, type **44**, press Enter to jump to the discount logic inside `ProcessOrder`.
 2. Set a breakpoint on the first `Console.WriteLine` line.
 3. Press **F5**. Use the conditional breakpoint from Segment 2 (still disabled, re-enable it, or step past earlier orders) to land on Carol's order.
 4. Right-click the “total” variable in Locals and **Analyze with Copilot**

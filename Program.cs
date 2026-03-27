@@ -1,50 +1,43 @@
-﻿// OrderProcessor/Program.cs
-// DEMO APP — contains 4 deliberate bugs for the Copilot debugging demo.
-// Do NOT fix before presenting.
-// We'll fix this together during the demo!
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace OrderProcessor
+﻿namespace DebuggingWithCopilotDemo
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var orders = GetSampleOrders();
+            var orders = GetOrders();
+            var highValueOrders = FilterHighValueOrders(orders);
 
             Console.WriteLine("=== Order Summary ===\n");
-
-            // BUG B3: Should be item.Price * item.Quantity
-            // As written, quantity is ignored, so high-value orders are undercounted.
-            var highValueOrders = orders
-                .Where(o => o.Items != null && o.Items.Sum(item => item.Price) > 100);
-
             Console.WriteLine($"Orders over $100: {highValueOrders.Count()}");
             foreach (var o in highValueOrders)
-                Console.WriteLine($"  #{o.Id}  {o.CustomerName}");
-
+            { Console.WriteLine($"  #{o.Id}  {o.CustomerName}"); }
             Console.WriteLine("\n=== Processing ===\n");
+            ProcessOrders(orders);
+        }
 
-            // BUG B1 will surface here — Bob's Items is null.
-            // BUG B2 target: Carol White (Id 1003) — use for conditional breakpoint demo.
+        static void ProcessOrders(IList<Order> orders)
+        {
+            // Carol White (Id 1003) — use for conditional breakpoint demo.
             foreach (var order in orders)
             {
                 ProcessOrder(order);
             }
         }
 
+        static IEnumerable<Order> FilterHighValueOrders(IList<Order> orders)
+        {
+            // Should be item.Price * item.Quantity
+            return orders
+                .Where(o => o.Items != null && o.Items.Sum(item => item.Price) > 100);
+        }
+
         static void ProcessOrder(Order order)
         {
             Console.WriteLine($"Order #{order.Id} — {order.CustomerName}");
 
-            // B1 fires here for Bob (Items is null)
             decimal subtotal = order.Items.Sum(i => i.Price * i.Quantity);
 
-            // BUG B4: threshold should be > 50, not > 500
-            // Result: nobody ever gets a discount in practice
+            // threshold should be > 50
             decimal discount = 0m;
             if (subtotal > 500)
             {
@@ -60,7 +53,7 @@ namespace OrderProcessor
             Console.WriteLine();
         }
 
-        static List<Order> GetSampleOrders()
+        static List<Order> GetOrders()
         {
             return new List<Order>
             {
