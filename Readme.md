@@ -119,7 +119,7 @@ Looking at the specialized agents available in VS 2026, there's a lot to cover.
 
 **Steps:**
 
-1. Press **Ctrl+G**, type **33**, press Enter to jump to the `foreach (var order in orders)` loop.
+1. Press **Ctrl+G**, type **23**, press Enter to jump to the `foreach (var order in orders)` loop.
 2. Right-click in the gutter *inside the loop body* → **Insert Temporary Breakpoint**.
 3. Right-click the breakpoint and select “Conditions…”.
 4. Click into the condition field and pause — let Copilot's suggestions appear.
@@ -151,7 +151,7 @@ Looking at the specialized agents available in VS 2026, there's a lot to cover.
 
 **Steps:**
 
-1. Press **Ctrl+G**, type **24**, press Enter to jump to the `highValueOrders` LINQ query.
+1. Press **Ctrl+G**, type **30**, press Enter to jump to the `highValueOrders` LINQ query.
 2. Set a breakpoint on the line *immediately after* the assignment.
 3. Press **F5**, hit the breakpoint.
 4. Hover over `highValueOrders` — the DataTip appears with a magnifying glass icon. Click it to open the **IEnumerable Visualizer**.
@@ -182,7 +182,7 @@ Looking at the specialized agents available in VS 2026, there's a lot to cover.
 
 **Steps:**
 
-1. Press **Ctrl+G**, type **55**, press Enter to jump to the discount logic inside `ProcessOrder`.
+1. Press **Ctrl+G**, type **44**, press Enter to jump to the discount logic inside `ProcessOrder`.
 2. Set a breakpoint on the first `Console.WriteLine` line.
 3. Press **F5**. Use the conditional breakpoint from Segment 2 (still disabled, re-enable it, or step past earlier orders) to land on Carol's order.
 4. Right-click the “total” variable in Locals and **Analyze with Copilot**
