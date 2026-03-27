@@ -40,7 +40,6 @@ namespace OrderProcessor
         {
             Console.WriteLine($"Order #{order.Id} — {order.CustomerName}");
 
-            // B1 fires here for Bob (Items is null)
             decimal subtotal = order.Items.Sum(i => i.Price * i.Quantity);
 
             // BUG B4: threshold should be > 50, not > 500
