@@ -15,7 +15,7 @@
             ProcessOrders(orders);
         }
 
-        private static void ProcessOrders(IList<Order> orders)
+        static void ProcessOrders(IList<Order> orders)
         {
             // Carol White (Id 1003) — use for conditional breakpoint demo.
             foreach (var order in orders)
@@ -24,7 +24,7 @@
             }
         }
 
-        private static IEnumerable<Order> FilterHighValueOrders(IList<Order> orders)
+        static IEnumerable<Order> FilterHighValueOrders(IList<Order> orders)
         {
             // Should be item.Price * item.Quantity
             return orders
