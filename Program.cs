@@ -35,6 +35,12 @@
         {
             Console.WriteLine($"Order #{order.Id} — {order.CustomerName}");
 
+            if (order.Items == null || !order.Items.Any())
+            {
+                Console.WriteLine($"Order #{order.Id} has no items.");
+                return;
+            }
+
             decimal subtotal = order.Items.Sum(i => i.Price * i.Quantity);
 
             // threshold should be > 50
