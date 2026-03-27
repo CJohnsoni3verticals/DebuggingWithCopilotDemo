@@ -47,7 +47,7 @@ Scenarios #6 (repo context), #7 (Parallel Stacks deadlocks), #8 (Debugger Agent 
 >
 > This demo aims to help you fill those gaps left by other tools.
 
-Some agents/skills aren’t currently “in the box” in VS 2022, but are automatically available when you open VS 2026. Similar to Claude Skills (which, btw, are also supported by Copilot now), these specialized agents *should* automatically “kick in” when they’re needed. Alternatively, you can select them explicitly.
+Some agents/skills are not currently “in the box” in VS 2022, but are automatically available when you open VS 2026. Similar to Claude Skills (which, btw, are also supported by Copilot now), these specialized agents *should* automatically “kick in” when they’re needed. Alternatively, you can select them explicitly.
 
 Looking at the specialized agents available in VS 2026, there's a lot to cover.
 ## GitHub Copilot Extension Agents
