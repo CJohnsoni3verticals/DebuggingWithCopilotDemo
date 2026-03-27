@@ -1,13 +1,4 @@
-﻿// OrderProcessor/Program.cs
-// DEMO APP — contains 4 deliberate bugs for the Copilot debugging demo.
-// Do NOT fix before presenting.
-// We'll fix this together during the demo!
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace OrderProcessor
+﻿namespace OrderProcessor
 {
     class Program
     {
@@ -17,8 +8,7 @@ namespace OrderProcessor
 
             Console.WriteLine("=== Order Summary ===\n");
 
-            // BUG B3: Should be item.Price * item.Quantity
-            // As written, quantity is ignored, so high-value orders are undercounted.
+            // Should be item.Price * item.Quantity
             var highValueOrders = orders
                 .Where(o => o.Items != null && o.Items.Sum(item => item.Price) > 100);
 
@@ -28,8 +18,7 @@ namespace OrderProcessor
 
             Console.WriteLine("\n=== Processing ===\n");
 
-            // BUG B1 will surface here — Bob's Items is null.
-            // BUG B2 target: Carol White (Id 1003) — use for conditional breakpoint demo.
+            // Carol White (Id 1003) — use for conditional breakpoint demo.
             foreach (var order in orders)
             {
                 ProcessOrder(order);
@@ -42,8 +31,7 @@ namespace OrderProcessor
 
             decimal subtotal = order.Items.Sum(i => i.Price * i.Quantity);
 
-            // BUG B4: threshold should be > 50, not > 500
-            // Result: nobody ever gets a discount in practice
+            // threshold should be > 50
             decimal discount = 0m;
             if (subtotal > 500)
             {
