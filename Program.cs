@@ -4,25 +4,31 @@
     {
         static void Main(string[] args)
         {
-            var orders = GetSampleOrders();
+            var orders = GetOrders();
+            var highValueOrders = FilterHighValueOrders(orders);
 
             Console.WriteLine("=== Order Summary ===\n");
-
-            // Should be item.Price * item.Quantity
-            var highValueOrders = orders
-                .Where(o => o.Items != null && o.Items.Sum(item => item.Price) > 100);
-
             Console.WriteLine($"Orders over $100: {highValueOrders.Count()}");
             foreach (var o in highValueOrders)
             { Console.WriteLine($"  #{o.Id}  {o.CustomerName}"); }
-
             Console.WriteLine("\n=== Processing ===\n");
+            ProcessOrders(orders);
+        }
 
+        private static void ProcessOrders(IList<Order> orders)
+        {
             // Carol White (Id 1003) — use for conditional breakpoint demo.
             foreach (var order in orders)
             {
                 ProcessOrder(order);
             }
+        }
+
+        private static IEnumerable<Order> FilterHighValueOrders(IList<Order> orders)
+        {
+            // Should be item.Price * item.Quantity
+            return orders
+                .Where(o => o.Items != null && o.Items.Sum(item => item.Price) > 100);
         }
 
         static void ProcessOrder(Order order)
@@ -47,7 +53,7 @@
             Console.WriteLine();
         }
 
-        static List<Order> GetSampleOrders()
+        static List<Order> GetOrders()
         {
             return new List<Order>
             {
